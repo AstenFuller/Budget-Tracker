@@ -13,6 +13,7 @@ export function updateExpenseAmount(amount) {
 }
 
 export function addExpense(description, amount) {
+    if(amount != 0 && amount != undefined && amount != NaN){
     return {
         type: 'ADD_EXPENSE',
         payload: {
@@ -20,4 +21,5 @@ export function addExpense(description, amount) {
             amount: parseFloat(amount)
         }
     };
+    }  
 }

@@ -13,11 +13,13 @@ export function updateIncomeAmount(amount) {
 }
 
 export function addIncome(description, amount) {
+    if(amount != 0 && amount != undefined && amount != NaN){
     return {
         type: 'ADD_INCOME',
         payload: {
             description,
             amount: parseFloat(amount)
         }
+    }
     };
 }

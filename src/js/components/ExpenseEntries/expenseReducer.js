@@ -25,6 +25,7 @@ const defaultState = {
         case 'ADD_EXPENSE': {
             const { description, amount } = action.payload;
             return {
+                amount: '',
                 description: '',
                 action: '',
                 lineItems: [
